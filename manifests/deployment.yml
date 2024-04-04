@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: devenergyaisolutionsaksstoredemo 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: devenergyaisolutionsaksstoredemo
+  template:
+    metadata:
+      labels:
+        app: devenergyaisolutionsaksstoredemo 
+    spec:
+      containers:
+        - name: devenergyaisolutionsaksstoredemo 
+          image: acrakstestsouthcentralus.azurecr.io/devenergyaisolutionsaksstoredemo
+          ports:
+          - containerPort: 5001
